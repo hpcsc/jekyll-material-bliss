@@ -15,7 +15,7 @@ react:
   description: > # this means to ignore newlines until "baseurl:"
     Just a regular developer who's passionate about crafting high quality software, a martial arts practitioner, a proud dad of two sons.
   baseurl: "" # the subpath of your site, e.g. /blog
-  url: "http://localhost:4000" # the base hostname & protocol for your site
+  url: "http://pnguyen.io" # the base hostname & protocol for your site
   permalink: /posts/:title
   social:
     github: http://github.com/hpcsc
@@ -29,7 +29,7 @@ email: hpcsc@users.noreply.github.com
 description: > # this means to ignore newlines until "baseurl:"
   Just a regular developer who's passionate about crafting high quality software, a martial arts practitioner, a proud dad of two sons.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://localhost:4000" # the base hostname & protocol for your site
+url: "http://pnguyen.io" # the base hostname & protocol for your site
 permalink: /posts/:title
 
 github_username: hpcsc
