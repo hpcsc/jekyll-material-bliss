@@ -46,7 +46,7 @@ export default class Menu extends Component {
   render() {
     return (
       <Drawer
-        docked
+        docked={false}
         width={this.getMenuWidth()}
         open={this.props.open}
         onRequestChange={this.props.handleToggle}
@@ -56,10 +56,10 @@ export default class Menu extends Component {
       >
         <AppBar
           title="Menu"
-          onLeftIconButtonTouchTap={this.props.handleToggle}
+          onLeftIconButtonClick={this.props.handleToggle}
            iconElementRight={<SearchBar getMenuWidth={this.getMenuWidth} location={this.props.location} />}
         />
-        <MenuItems config={this.props.config} />
+        <MenuItems config={this.props.config} onMenuItemClicked={this.props.handleToggle} />
       </Drawer>
     );
   }

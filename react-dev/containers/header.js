@@ -43,7 +43,7 @@ class Header extends Component {
       <div>
         <AppBar
           className='app-bar'
-          onLeftIconButtonTouchTap={this.handleToggle}
+          onLeftIconButtonClick={this.handleToggle}
           showMenuIconButton={this.hideMenuButton()}
           iconElementRight={
             <RightBar config={this.props.config} handleThemeSwitch={this.props.handleThemeSwitch} />}

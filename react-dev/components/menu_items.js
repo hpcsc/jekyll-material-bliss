@@ -17,24 +17,24 @@ const styles = {
     paddingTop: 20,
   }
 };
-const getMenuItem = (name, path, url) => getLink(
-    <MenuItem>{name}</MenuItem>,
+const getMenuItem = (name, path, url, onMenuItemClicked) => getLink(
+    <MenuItem onClick={onMenuItemClicked} >{name}</MenuItem>,
     name,
     url, //the site root url
     path
   );
 
-const renderMenuItems = (url) => {
+const renderMenuItems = (url, onMenuItemClicked) => {
   const result = [];
    _.forEach(menuItems, (value, key) => {
-      result.push(getMenuItem(key, value, url));
+      result.push(getMenuItem(key, value, url, onMenuItemClicked));
   });
   return result.map((item) => item);
 };
 
 export const MenuItems = props => (
     <div>
-      {renderMenuItems(props.config.url)}
+      {renderMenuItems(props.config.url, props.onMenuItemClicked)}
       <Card>
         <CardHeader
           title={props.config.name}
@@ -47,7 +47,7 @@ export const MenuItems = props => (
         </CardText>
         <CardActions>
           {getLink(
-            <RaisedButton label="More About Me" primary />,
+            <RaisedButton label="More About Me" onClick={props.onMenuItemClicked} primary />,
             '',
             props.config.url,
             '/about/'
