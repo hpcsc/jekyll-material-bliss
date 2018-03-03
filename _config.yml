@@ -5,8 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
-react:
+common: &common
   title: David Nguyen
   name: David Nguyen
   menu_right_subtitle: Developer || Karateka
@@ -16,26 +15,17 @@ react:
   description: > # this means to ignore newlines until "baseurl:"
     Just a regular developer who's passionate about crafting high quality software, a martial arts practitioner, a proud dad of two sons.
   baseurl: "" # the subpath of your site, e.g. /blog
-  url: "https://pnguyen.io" # the base hostname & protocol for your site
   permalink: /posts/:title
+# Site settings
+react:
+  <<: *common
   social:
     github: http://github.com/hpcsc
     rss: /feed.xml
 
-title: David Nguyen
-name: David Nguyen
-menu_right_subtitle: Developer || Karateka
-avatar: https://www.gravatar.com/avatar/624eb530503fe6117f4b4b5ad3acf062
-email: hpcsc@users.noreply.github.com
-logo: static/img/logo.png
-description: > # this means to ignore newlines until "baseurl:"
-  Just a regular developer who's passionate about crafting high quality software, a martial arts practitioner, a proud dad of two sons.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://pnguyen.io" # the base hostname & protocol for your site
-permalink: /posts/:title
+<<: *common
 
 github_username: hpcsc
-
 
 # Build settings
 markdown: kramdown
