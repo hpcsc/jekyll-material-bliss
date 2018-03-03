@@ -8,9 +8,3 @@ set -e
 
 # Set up Ruby dependencies via Bundler.
 gem install bundler --conservative
-bundle check || bundle install
-bundle update
-
-# Set up JS dependencies via Yarn.
-npm install -g yarn
-yarn install

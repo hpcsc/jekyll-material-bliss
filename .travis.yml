@@ -2,9 +2,11 @@ language: ruby
 rvm:
 - 2.4.1
 install:
-- "./bin/ci-setup"
+- env
+- "./bin/ci-install-bundler.sh"
 script:
-- "./bin/ci-build"
+- "./build-prod.sh"
+- "./bin/ci-commit-artifacts.sh"
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true

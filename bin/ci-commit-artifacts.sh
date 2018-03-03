@@ -5,24 +5,13 @@
 # Exit if any subcommand fails.
 set -e
 
-echo "================== ENVIRONMENT VARIABLES ========================="
-env
-
+echo "========================= COMMIT TO GITHUB PAGE ================="
 # Variables
 ORIGIN_URL='https://github.com/hpcsc/hpcsc.github.io'
 ORIGIN_CREDENTIALS=${ORIGIN_URL/\/\/github.com/\/\/$GITHUB_TOKEN@github.com}
 TRAVIS_SHORT_HASH=$(git rev-parse --short $TRAVIS_COMMIT)
 COMMIT_MESSAGE="[TRAVIS][#$TRAVIS_BUILD_NUMBER][$TRAVIS_SHORT_HASH] triggered by $TRAVIS_REPO_SLUG"
 
-echo "========================= YARN INSTALL =========================="
-
-# Build site.
-yarn install
-
-echo "========================= BUILD ================================="
-./build-prod.sh
-
-echo "========================= COMMIT TO GITHUB PAGE ================="
 # Checkout github pages
 git clone $ORIGIN_URL
 
@@ -38,7 +27,5 @@ git config user.email "$EMAIL"
 git add -fA
 git commit --allow-empty -m "$COMMIT_MESSAGE"
 git push -f -q $ORIGIN_CREDENTIALS master
-
-echo "================== DEPLOYED SUCCESSFULLY ========================"
 
 exit 0
