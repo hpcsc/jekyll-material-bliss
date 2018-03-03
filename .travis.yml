@@ -3,13 +3,16 @@ rvm:
 - 2.4.1
 install:
 - env
-- "./bin/ci-install-bundler.sh"
+- "./bin/ci-bundle-install.sh"
+- "./bin/ci-npm-install.sh"
 script:
 - "./build-prod.sh"
-- "./bin/ci-commit-artifacts.sh"
+after_success:
+  - "./bin/ci-commit-artifacts.sh"
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - USERNAME: hpcsc
   - EMAIL: hpcsc@users.noreply.github.com
+  - DEPLOY_REPOSITORY: https://github.com/hpcsc/hpcsc.github.io
   - secure: GnsVHrW0JC9b2I8xL5c6/GQ6DGC5WZJ310d3xIDOfgCS/iB2V7zFSJgwvnJvhTxbsj5XhSDTaoLidfjIkB/r4oZxGgyHto3bNmAaMeZOtflqiVkTzb2w8L/tgB3Q5ngeYdFRGPS/pF0UYxOWXP1hd3aKoWDPaag0VJ/unwMXYaX6uhe47J8j/KTbZiTpexpN/GETKXSN51mNKpev9ciVv327i66bCY5Y4MLcqZEgiK+msVFQw+U7tDavVqhCdtGxWPSgf5NdaFmPgy+p46P6OFj+4XFB9w2rldcSJjoC8ml58cCf/hRdROm2ako5E81fP4jdZlgQz/btnKsWwmYW5NYG9L87cMkYNlAqay2qLWsNsM6TUAqTlSxIGfMhAd2Xzm8nwNyZve6p28MqjjwK5GPuo/HzpxyvXvVcn/nfPgH4OEJcEOYf2YQKVMR8C1EukikxWYpKAVnn0jOk+GUb7HwGXwfbMwtTAMTNeg0sZK+H5lgJ/yYcJ6L5sGanRunh2ww2Qu0VYIQ45QuLJx/GMJZPXQppwauC4X9+3j29DZukb6Og6zJY8ZwDivYIxltRAYAZnycTPB732AGJqaH9uPQAa9dOTc3GIZhXiNHrrckZpstCkwnEdMvymkcdCZEEg5nHhZEfngLmMAstwF3mq6qPK9xdGzd5PyIt8ZxAuzs=

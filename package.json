@@ -7,7 +7,8 @@
     "webpack": "webpack --progress --colors",
     "dev": "webpack-dev-server --progress --colors",
     "start": "npm run dev",
-    "build": "webpack --config webpack.prod.config.js --progress -p --colors",
+    "build:production": "webpack --config webpack.prod.config.js --progress -p --colors",
+    "build:static": "NODE_ENV=development babel-node --presets 'react,es2015' react-dev/render_to_file.js",
     "jekyll": "webpack --config webpack.dev.config.js --progress -p --colors -w",
     "production": "webpack --progress -p --colors -w"
   },
