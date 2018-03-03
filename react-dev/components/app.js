@@ -83,43 +83,23 @@ const lightMuiTheme = getMuiTheme(null, {
 
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { dark: true };
-  }
-
-  shouldComponentUpdate(nextState) {
-    if (this.state.dark !== nextState.dark) {
-      return true;
-    }
-  }
 
   //push out menu for static post content
   getTheme = () => {
-    if (this.state.dark) {
-      this.toggleStaticPostContent();
-      return darkMuiTheme;
-    }
     this.toggleStaticPostContent();
-    return lightMuiTheme;
+    return darkMuiTheme;
   }
 
   toggleStaticPostContent = () => {
     const staticContent = document.getElementById('post-static-content');
-    if (staticContent && this.state.dark) {
+    if (staticContent) {
       staticContent.classList.remove('static-paper-light');
-    } else if (staticContent && !this.state.dark) {
-      staticContent.classList.add('static-paper-light');
     }
-  }
-
-  handleToggle = () => {
-    this.setState({ dark: !this.state.dark });
   }
   //modify children prop with theme state so that it re-renders on-screen
   renderChildren = () => Children.map(this.props.children, (child) => cloneElement(child, [{
-        themeState: this.state.dark
-      }]));
+    themeState: true
+  }]));
 
   render() {
     return (
@@ -128,7 +108,7 @@ export default class App extends Component {
           <div>
             <Header location={this.props.location} handleThemeSwitch={this.handleToggle}>
               {this.renderChildren()}
-            <Footer themeState={this.state.dark} />
+            <Footer themeState={true} />
           </Header>
           </div>
         </MuiThemeProvider>
