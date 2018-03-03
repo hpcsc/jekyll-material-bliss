@@ -8,7 +8,7 @@
   - .net
   - asp.net
   - angularjs
-  description: A sample project following Onion architecture in ASP.NET, AngularJS.
+  description: A sample project following Onion architecture using ASP.NET, AngularJS.
 
 - title: Sharpenter.BootstrapperLoader
   subtitle: Bootstrapper Loader
