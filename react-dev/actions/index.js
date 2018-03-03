@@ -8,12 +8,11 @@ export const FETCH_POSTS_TAG = 'FETCH_POST_TAG';
 export const FETCH_SITE_INFO = 'FETCH_SITE_INFO';
 export const FETCH_PROJECTS = 'FETCH_PROJECTS';
 
-const ROOT_URL = 'https://pnguyen.io';
 const API_URL = '/api/v1/';
 
-const postsRequest = axios.get(`${ROOT_URL}${API_URL}pages.json`);
-const siteInfoRequest = axios.get(`${ROOT_URL}${API_URL}config.json`);
-const projectsRequest = axios.get(`${ROOT_URL}${API_URL}projects.json`);
+const postsRequest = axios.get(`${API_URL}pages.json`);
+const siteInfoRequest = axios.get(`${API_URL}config.json`);
+const projectsRequest = axios.get(`${API_URL}projects.json`);
 
 export function fetchPosts(term) {
   return {
@@ -56,7 +55,7 @@ export function fetchPostsByTag(tag) {
 }
 
 export function fetchPage(title, url) {
-    const request = axios.get(`${ROOT_URL}${url}${title}.json`);
+    const request = axios.get(`${url}${title}.json`);
     return {
       type: FETCH_PAGE,
       payload: {
