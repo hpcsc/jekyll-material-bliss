@@ -13,5 +13,5 @@ A modified version of [material-bliss-jekyll-theme](https://github.com/Insidious
 #### for Development:
 run both build-dev and npm run jekyll in different terminals
 ```
-npm run jekyll // in one terminal
+npm start // in one terminal
 ./build-dev.sh //in another
