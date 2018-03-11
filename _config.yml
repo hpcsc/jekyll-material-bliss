@@ -25,6 +25,9 @@ react:
 
 <<: *common
 
+comments: true
+disqus_shortname: pnguyen
+
 github_username: hpcsc
 
 # Build settings

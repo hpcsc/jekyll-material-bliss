@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Paper from 'material-ui/Paper';
 
+import ReactDisqusComments from 'react-disqus-comments';
 
 import { blueGrey800, grey50, teal900, green900, green500, teal500, cyan500 } from 'material-ui/styles/colors';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
@@ -52,8 +53,14 @@ class Post extends Component {
             <div className="post-content" itemProp="articleBody">
               {'{{ content }}'}
             </div>
+            <ReactDisqusComments
+              shortname={"{{ site.disqus_shortname }}"}
+              identifier={"{{ page.id }}"}
+              title={"{{ page.title }}"}
+              url={"{{ site.url }}{{ page.url }}"} />
           </article>
         </Paper>
+        <script type="text/javascript" src={"https://{{ site.disqus_shortname }}.disqus.com/embed.js"} ></script>
       </div>
     </MuiThemeProvider>
     );

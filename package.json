@@ -64,6 +64,7 @@
     "material-ui": "^0.20.0",
     "mdi": "^1.7.22",
     "react": "^15.4.1",
+    "react-disqus-comments": "^1.1.1",
     "react-dom": "^15.4.1",
     "react-html-document": "^3.1.0",
     "react-masonry-component": "^5.0.3",
