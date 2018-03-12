@@ -11,7 +11,7 @@ In this post, I'll go through the pipeline that automatically picks up any chang
 
 Below is an overview of the pipeline:
 
-![Github Page Pipeline](/assets/2018-03-12/github-page-pipeline.png "Github Page Pipeline")
+![Github Page Pipeline]({% asset_path 2018-03-12-github-page-pipeline %} "Github Page Pipeline")
 
 There are 2 Github repositories involved:
 
