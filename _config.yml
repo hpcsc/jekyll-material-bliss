@@ -30,6 +30,8 @@ disqus_shortname: pnguyen
 
 github_username: hpcsc
 
+timezone: Asia/Singapore
+
 # Build settings
 markdown: kramdown
 
