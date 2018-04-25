@@ -56,7 +56,7 @@ The value stream map is triggered by a commit to either backend repository or mo
 
 Once the commit phase is done, deployment to dev environment is triggered. For mobile, this means 2 pipelines are run in parallel (`MobileDevDeploymentAndroid` and `MobileDevDeploymentIOS`)
 
-When all dev deployments are done, `SystemTests` pipeline is triggered. In a real world pipeline, this will pull system tests tool and scripts from `system-tests` repo, start backend, start mobile and run system tests against mobile which in turn hit backend server. The last stage of this pipeline is `Approve` stage, which can only by triggered manually. This is to simulate in real scenario where the decision to deploy to UAT is decided by some business user.
+When all dev deployments are done, `SystemTests` pipeline is triggered. In a real world pipeline, this will pull system tests tool and scripts from `system-tests` repo, start backend, start mobile and run system tests against mobile which in turn hit backend server. The last stage of this pipeline is `Approve` stage, which can only be triggered manually. This is to simulate a real scenario where the decision to deploy to UAT is decided by some business user.
 
 ![]({% asset_path 2018-03-30-system-tests-pipeline %} "System Tests Pipeline")
 
