@@ -11,4 +11,3 @@ echo "========================= BUNDLE INSTALL ======================="
 # Set up Ruby dependencies via Bundler.
 gem install bundler --conservative
 bundle install
-bundle update
