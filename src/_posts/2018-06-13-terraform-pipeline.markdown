@@ -232,4 +232,4 @@ Visiting the new Public IP gives us this page:
 
 ## Summary
 
-My key takeaway after implementing this pipeline is that: it's important to have a clear seperation between Terraform infrastructure definition (which is equivalent to traditional software application/code) and Terraform environment specific configuration (containing Terraform state, environment specific `tfvars`). This separation allows us to apply the same pipeline design techniques in traditional software build pipeline.
+My key takeaway after implementing this pipeline: it's important to have a clear seperation between Terraform infrastructure definition (which is equivalent to traditional software application/code) and Terraform environment specific configuration (containing Terraform state, environment specific `tfvars`). This separation allows us to apply the same pipeline design techniques from traditional software build pipeline to build CD pipelines for infrastructure.
