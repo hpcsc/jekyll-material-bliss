@@ -7,6 +7,13 @@ categories: programming, golang, devops
 tags: programming golang devops
 ---
 
+<pre>
+<b>TLDR</b>
+
+I created a tool to switch among multiple AWS profiles.
+Installation and usage instruction are at <a href="https://github.com/hpcsc/aws-profile-utils">GitHub repo</a>
+</pre>
+
 ## Introduction
 
 If you are working with AWS frequently enough, you should be aware of AWS CLI and its 2 related configuration files:
