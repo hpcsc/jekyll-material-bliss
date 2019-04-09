@@ -5,6 +5,7 @@ date:   2018-09-13 09:00:00 +0800
 type: post
 categories: programming, golang, devops
 tags: programming golang devops
+toc: true
 ---
 
 <pre>

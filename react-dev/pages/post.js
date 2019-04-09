@@ -51,7 +51,7 @@ class Post extends Component {
               {'{% if page.author %}'} • <span itemProp="author" itemScope itemType="http://schema.org/Person"><span itemProp="name">{'{{ page.author }}'}</span></span>{'{% endif %}'}</p>
             </header>
             <div className="post-content" itemProp="articleBody">
-              {'{{ content }}'}
+              {'{{ content | toc }}'}
             </div>
             <ReactDisqusComments
               shortname={"{{ site.disqus_shortname }}"}

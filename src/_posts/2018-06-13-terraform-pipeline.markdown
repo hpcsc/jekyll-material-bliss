@@ -5,6 +5,7 @@ date:   2018-06-13 09:00:00 +0800
 type: post
 categories: devops, deployment
 tags: devops deployment terraform packer gocd
+toc: true
 ---
 
 ## Introduction

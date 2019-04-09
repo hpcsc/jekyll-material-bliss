@@ -12,4 +12,5 @@ group :jekyll_plugins do
   gem 'sass'
   gem 'kramdown'
   gem 'rouge'
+  gem 'jekyll-toc'
 end
