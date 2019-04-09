@@ -61,6 +61,7 @@ This is how they look in GoCD overview page:
 
 Packer file `nginx.json` defines a single builder:
 
+{% raw %}
 ```
   "variables": {
     "build_label": "{{ env `BUILD_LABEL`}}"
@@ -76,6 +77,7 @@ Packer file `nginx.json` defines a single builder:
     }
   ]
 ```
+{% endraw %}
 
 Environment variable BUILD_LABEL (which is passed in by GoCD) is used to name final AMI. Other settings are just standard EC2 settings
 
